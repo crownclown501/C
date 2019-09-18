@@ -4,11 +4,12 @@ int matriz[5][5];
 
 void ingresar(void)
 {
+    printf("Llenado de matriz:");
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)
         {
-            printf("Ingrese el valor para la posición [%d][%d]:\n", i + 1, j + 1);
+            printf("\nIngrese el valor para la posición [%d][%d]: ", i + 1, j + 1);
             scanf("%d", &matriz[i][j]);
         }
     }
@@ -61,7 +62,7 @@ void imprimirVal(void)
     scanf("%d %d", &fila, &columna);
     printf("Valor: %d\n", matriz[fila][columna]);
 }
-int main()
+int main(void)
 {
     int seleccion, ingresada;
     if (!ingresada)
@@ -89,7 +90,8 @@ int main()
         imprimirVal();
         main();
         break;
-
+    case 0:
+        return 0;
     default:
         printf("Opción inválida\n");
         break;

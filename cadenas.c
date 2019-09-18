@@ -36,7 +36,7 @@ void concatenar(void)
         j++;
     }
     cadenaConjunta[i + j] = '\0';
-    printf("%s\n",cadenaConjunta);
+    printf("%s\n", cadenaConjunta);
 }
 void invertir(void)
 {
@@ -150,7 +150,7 @@ int main(void)
     {
         ingresar();
     }
-    printf("\nMenú:\n1) Obtener longitud de cadenas.\n2) Concatenar cadenas.\n3) Invertir cadenas.\n4) Copiar una cadena en otra.\n5) Comparar cadenas.\n6) Buscar índice de letra en cadenas.\n7) Ingresar cadenas de nuevo.\n");
+    printf("\nMenú:\n1) Obtener longitud de cadenas.\n2) Concatenar cadenas.\n3) Invertir cadenas.\n4) Copiar una cadena en otra.\n5) Comparar cadenas.\n6) Buscar índice de letra en cadenas.\n7) Ingresar cadenas de nuevo.\n0) Salir\n");
     scanf("%d", &seleccion);
     switch (seleccion)
     {
@@ -176,9 +176,10 @@ int main(void)
         getchar();
         ingresar();
         main();
+    case 0:
+        return 0;
     default:
         printf("No seleccionó una opción valida, intente de nuevo.\n");
         break;
     }
-    return 0;
 }
