@@ -8,7 +8,7 @@ struct libro
     char editorial;
     int edicion;
     int paginas;
-} biblioteca[100];
+} biblioteca[1];
 
 int i = 0;
 
@@ -30,11 +30,11 @@ void ingresarLibros(void)
 
 void imprimirLibrosPorPaginas(void)
 {
-    for (int j = 0; j <= i; j++)
+    for (int j = 0; j < i; j++)
     {
         if (biblioteca[j].paginas < 100)
         {
-            printf("Titulo: %s\n", biblioteca[j].titulo);
+            printf("Titulo: %s\n", &biblioteca[j].titulo);
         }
     }
 }
@@ -45,11 +45,11 @@ void imprimirAutorPorEdicion(void)
     int edicion;
     printf("Ingrese el año: ");
     scanf("%d", &edicion);
-    for (int j = 0; j <= i; j++)
+    for (int j = 0; j < i; j++)
     {
         if (biblioteca[j].edicion == edicion)
         {
-            printf("Autor: %s\n", biblioteca[j].autor);
+            printf("Autor: %s\n", &biblioteca[j].autor);
         }
     }
 }
@@ -60,7 +60,7 @@ void imprimirTitulosPorAutor(void)
     char autor[100];
     printf("Ingrese el nombre del autor: ");
     scanf("%c", &autor);
-    for (int j = 0; j <= i; j++)
+    for (int j = 0; j < i; j++)
     {
         if (strcmp(biblioteca[j].autor, autor) == 0)
         {
@@ -74,12 +74,14 @@ void imprimirDatosPorTitulo(void)
     getchar();
     char titulo[100];
     printf("Ingrese el titulo del libro: ");
-    fgets(titulo, 99, stdin);
-    for (int j = 0; j <= i; j++)
+    scanf("%s", &titulo);
+    for (int j = 0; j < i; j++)
     {
         if (strcmp(biblioteca[j].titulo, titulo) == 0)
         {
             printf("Titulo: %s\nAutor; %s\nEditorial: %s\nEdicion: %d\nPaginas: %d\n", biblioteca[j].titulo, biblioteca[j].autor, biblioteca[j].editorial, biblioteca[j].edicion, biblioteca[j].paginas);
+        } else {
+            printf("%s", biblioteca[j].titulo);
         }
     }
 }
@@ -89,8 +91,8 @@ void imprimirAutoresPorEditorial(void)
     getchar();
     char editorial[100];
     printf("Ingrese el nombre de la editorial: ");
-    fgets(editorial, 99, stdin);
-    for (int j = 0; j <= i; j++)
+    scanf("%s", &editorial);
+    for (int j = 0; j < i; j++)
     {
         if (strcmp(biblioteca[j].editorial, editorial) == 0)
         {
@@ -103,6 +105,7 @@ int main(void)
 {
     int seleccion;
     printf("Menu:\n1) Ingresar libro\n2) Imprimir libros con menos de 100 pag.\n3) Imprimir libros de un año\n4) Imprimir libros de un autor\n5) Imprimir libro por titulo\n6) Imprimir autores de una editorial\n0) Terminar programa\n");
+    scanf("%d", &seleccion);
     switch (seleccion)
     {
     case 1:
@@ -131,6 +134,6 @@ int main(void)
         imprimirAutoresPorEditorial();
         main();
     case 0:
-        break;
+        return 0;
     }
 }

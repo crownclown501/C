@@ -19,7 +19,6 @@ void concatenar(void)
     printf("Escriba un separador o nada para dejar las cadenas juntas.\n");
     getchar();
     separador = getchar();
-    /* Leer caracter aceptando espacios" */
     while (primerCadena[i] != '\n')
     {
         cadenaConjunta[i] = primerCadena[i];
