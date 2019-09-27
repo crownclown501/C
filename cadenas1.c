@@ -2,11 +2,11 @@
 
 int cadenasIngresadas, longitudPrimerCadena, longitudSegundaCadena;
 char primerCadena[1001], segundaCadena[1001];
-
-int longitud(char cadenaAMedir[])
+/*lee la cantidad de caracteres sin contar */
+int longitud(char cadenaAMedir[])  /*declaracion de la longitud que tiene entre parentesis el acceso a un elmento en los parentesis*/
 {
     int longitud = 0;
-    while (cadenaAMedir[longitud] != '\n')
+    while (cadenaAMedir[longitud] != '\n')  /*“\n” significa que termina una línea y comienza otra más abajo a partir de ahí.pero como tenemos 1= difernerte de entonces no salta a otra linea*/
     {
         longitud++;
     }
@@ -17,8 +17,8 @@ void concatenar(void)
     char cadenaConjunta[2001], separador;
     int i = 0, j = 0;
     printf("Escriba un separador o nada para dejar las cadenas juntas.\n");
-    getchar();
-    separador = getchar();
+    getchar();  /* getchar is used to read a single character from a keyboard on the output screen. This character can be any character from the keyboard and even a string*/
+    separador = getchar();        /*getchar has the side effect of removing the next character from the input buffer. The loop in*/
     while (primerCadena[i] != '\n')
     {
         cadenaConjunta[i] = primerCadena[i];
