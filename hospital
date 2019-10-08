@@ -1,0 +1,102 @@
+#include <stdio.h>  //falta poner lo demas 
+#include <string.h>
+#include <conio.h>
+
+struct paciente {
+	char nombre[100];
+	int numeroPaciente;
+	char corre[100];
+	int celular;
+	int edad;
+	char sexo
+};
+struct cupo {
+	enero[31];
+	febrero[28];
+	marzo[31];
+	abril[30];
+	mayo[31];
+	junio[30]; 
+	julio[31]; 
+	agosto[31]; 
+	septiembre[30];
+	octubre[31];
+	noviembre[30]; 
+	diciembre[31];
+};
+
+//declarar el tipo de constante  junto con el nombre 
+void consulta(void)
+{
+	for (int i=0,i<j,i++)
+	{
+		if (c==0)
+		{
+		printf("Ingrese numero paciente : ");
+		scanf("%d",&paciente[i].numero);
+		
+		
+		}
+		else 
+			{
+		printf("\nIngrese nombre: ");
+		scanf("%s", &paciente[i].nombre);
+		printf("\nIngrese correo: ");
+		scanf("%s", &paciente[i].correo);
+		printf("\nIngrese num celular : ");
+		scanf("%d", &paciente[i].celular);
+		printf("\nIngrese sexo: ");
+		scanf("%s", &paciente[i].sexo);
+		printf("\nIngrese edad: ");
+		scanf("%d", &paciente[i].edad);
+		}
+	}
+}
+	
+int main (void) {
+	mostrarMapa();
+	int seleccion;
+	printf("Menu:\n1) enero.\n2) febrero\n3) marzo\n4) abril\n5) mayo\n6) junio\n7) julio\n8) agosto\n9) septiembre\n10) octubre\n11) noviembre\n12) diciembre\n");
+	scanf("%d", &seleccion);
+	switch (seleccion)
+	{
+	case 1:
+		getchar();
+		break;
+	case 2:
+		getchar();
+		break;
+	case 3:
+		getchar();
+		break;
+	case 4:
+		getchar();
+		break;
+	case 5:
+		getchar();
+		break;
+	case 6:
+		getchar();
+		break;
+	case 7:
+		getchar();
+		break;
+	case 8:
+		getchar();
+		break;
+	case 9:
+		getchar();
+		break;
+	case 10:
+		getchar();
+		break;
+	case 11:
+		getchar();
+		break;
+	case 12:
+		getchar();
+		break;
+	default:
+		break;
+	}
+} 
